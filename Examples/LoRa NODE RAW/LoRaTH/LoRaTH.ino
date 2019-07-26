@@ -49,8 +49,8 @@
 // Defines what sensors are available in the hardware...
 #define SHT21
 //#define DS18B20
-//#define SUNRISE
-#define BMP280    // Note: When the pressure sensor is present, the pressure value replaces the dew temperature value (see payload structure)
+#define SUNRISE
+//#define BMP280    // Note: When the pressure sensor is present, the pressure value replaces the dew temperature value (see payload structure)
 
 
 // Structure of default configuration parameters. This parameters are stored in internal eeprom...
@@ -148,6 +148,9 @@ SHT2xClass SHT2x;
   Adafruit_BMP280 bmp; // I2C
 #endif
 
+// Global variables...
+boolean modoCMD = false;  // flag line command entry
+
 /**************************************************************************
  * SETUP
  *************************************************************************/  
@@ -238,8 +241,10 @@ void setup(){
 
   // Check the RX pin to see if you have to enter command line mode...
   if(digitalRead(RX)){
+    modoCMD = true;
     led_commandLine();
     commandLine();
+    modoCMD = false;
   }
   led_init();
 
