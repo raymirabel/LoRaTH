@@ -49,7 +49,7 @@
 // Defines what sensors are available in the hardware...
 #define SHT21
 //#define DS18B20
-#define SUNRISE
+//#define SUNRISE
 //#define BMP280    // Note: When the pressure sensor is present, the pressure value replaces the dew temperature value (see payload structure)
 
 
@@ -70,8 +70,8 @@ typedef struct {
 stConfig config;
 
 // Identify the node
-#define DEVICE_ID      5      // 5 = LoRaSDL
-//#define DEVICE_ID      6      // 6 = LoRaTH
+//#define DEVICE_ID      5      // 5 = LoRaSDL
+#define DEVICE_ID      6      // 6 = LoRaTH
 //#define DEVICE_ID      7      // 7 = LoRaX1
 //#define DEVICE_ID      8      // 8 = LoRaHALL
 
