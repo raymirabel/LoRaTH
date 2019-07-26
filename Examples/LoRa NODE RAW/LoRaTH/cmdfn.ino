@@ -304,7 +304,6 @@ int command_param(int argc, char** argv){
     cmd.printf(F("led   = on\r\n"));  
   else
     cmd.printf(F("led   = off\r\n"));      
-  cmd.printf(F("dip   = on\r\n"));  
   cmd.printf(F("pan   = %d\r\n"), (long)config.rfPan);
   return(true);
 }
