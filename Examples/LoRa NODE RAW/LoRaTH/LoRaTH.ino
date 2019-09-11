@@ -34,17 +34,17 @@
 #define  FIRMWARE_VERSION "1.00"
 #define  HARDWARE_VERSION "190506"
 
+#include <SPI.h>
+#include <RHReliableDatagram.h>
+#include <RH_RF95.h>
+#include "LowPower.h"
+#include <OneWire.h>
+#include <DallasTemperature.h>
 #include <SoftwareSerial.h>
 #include <Wire.h>
-#include <SPI.h>
+#include <Adafruit_BMP280.h>
+#include <SHT2x.h>
 #include <EEPROM.h>
-#include <RHReliableDatagram.h>     // https://www.airspayce.com/mikem/arduino/RadioHead/index.html
-#include <RH_RF95.h>                // https://www.airspayce.com/mikem/arduino/RadioHead/index.html
-#include <LowPower.h>               // https://github.com/rocketscream/Low-Power
-#include <OneWire.h>                // https://www.pjrc.com/teensy/td_libs_OneWire.html
-#include <DallasTemperature.h>      // https://www.arduinolibraries.info/libraries/dallas-temperature
-#include <Adafruit_BMP280.h>        // https://github.com/adafruit/Adafruit_BMP280_Library
-#include <SHT2x.h>                  // https://github.com/raymirabel/SHT2x
 
 // Defines what sensors are available in the hardware...
 #define SHT21
